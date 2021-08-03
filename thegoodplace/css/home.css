@@ -1,0 +1,249 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
+    display:block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  text-align: center;
+  background-color: #f3f3f3;
+	font-family: brandon-grotesque, sans-serif;
+}
+
+header {
+	padding: 3%;
+}
+
+h1 {
+	font-size: 5rem;
+	text-align: center;
+	color: #5fb74c;
+	font-weight: 700;
+}
+
+.theme {
+	display: none;
+ }
+
+h2{
+  padding: 5%;
+  font-size: 3rem;
+  color: #5fb74c;
+	font-weight: 700;
+	font-style: normal;
+}
+
+p {
+	font-weight: 300;
+	font-style: normal;
+	color: #191919;
+	font-size: 1.5rem;
+	text-align: center;
+	width: 80%;
+}
+
+img {
+	max-width: 500px;
+	width: 100%;
+	border-bottom: 10px solid #5fb74c;
+}
+
+/************************************* Image Hover Grow Effect*/
+.hvr-grow {
+	 display: inline-block;
+	 vertical-align: middle;
+	 transform: translateZ(0);
+	 box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	 backface-visibility: hidden;
+	 -moz-osx-font-smoothing: grayscale;
+	 transition-duration: 0.3s;
+	 transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+	 transform: scale(1.1);
+}
+
+/****************************************************************************************** JANET  */
+.janet-container {
+	padding-top: 10%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.intro {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 3%;
+}
+
+.intro a {
+	background: #5fb74c;
+	color: white;
+	text-decoration: none;
+	padding: 2% 4%;
+	font-weight: 700;
+	border-radius: 4px;
+	font-size: 1.4rem;
+	margin-top: 3%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.intro a:hover {
+	color: #5fb74c;
+	cursor: pointer;
+	background-color: transparent;
+	border: 2px solid #5fb74c;
+}
+
+.hide {
+	display: none;
+}
+
+/****************************************************************************************** QUIZ  */
+.whole-quiz {
+	display: none;
+}
+
+/* Add property for JS to call on */
+.show {
+	display: block;
+}
+
+/* Add style to entire quiz block */
+.quiz-style {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	padding: 3%;
+}
+
+.quiz-container {
+  position: relative;
+  height: 200px;
+  margin: 10% 0;
+	background-color:#f3f3f3;
+}
+
+.question {
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2%;
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 500;
+	color: #191919;
+}
+
+.answers {
+  margin-bottom: 5%;
+  text-align: left;
+  display: inline-block;
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 500;
+	color: #191919;
+}
+
+.answers label {
+  display: block;
+  margin-bottom: 3%;
+	font-size: 1.2rem;
+}
+
+.slide {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.active-slide {
+  opacity: 1;
+  z-index: 2;
+}
+
+.quiz-buttons {
+    display: flex;
+		flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button, .button {
+	font-family: brandon-grotesque, sans-serif;
+	font-size: 1.4rem;
+	background-color: #5fb74c;
+	color: #fff;
+	border-radius: 3px;
+	cursor: pointer;
+	font-weight: 700;
+	margin: 5%;
+	width: 200px;
+	height: 70px;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+button:hover, .button:hover {
+	background-color: #191919;
+}
+
+/****************************************************************************************** Max-width media query 465px  */
+
+/* @media (max-width: 465px) {
+	button {
+		margin-top: 20%;
+	}
+
+	.quiz-container {
+		margin-bottom: 10%;
+	}
+} */
+
+/****************************************************************************************** Min-width media query 970px  */
+
+@media (min-width: 600px) {
+.quiz-buttons {
+		flex-direction: row;
+}
+
+/****************************************************************************************** Min-width media query 970px  */
+
+@media (min-width: 970px) {
+	header {
+		padding: 15%;
+	}
+	
+	.janet-container {
+		flex-direction: row;
+	}
+
+	.quiz-container {
+		margin: 5% 0;
+	}
+
+	.answers label {
+		font-size: 1.6rem;
+	}
+}

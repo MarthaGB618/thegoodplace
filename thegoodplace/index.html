@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<title></title>
+
+		<link type="text/css" rel="stylesheet" href="css/home.css" />
+		<link rel="stylesheet" href="https://use.typekit.net/jin1vxk.css">
+
+		<meta name="viewport" content="width=device-width, maximum-scale=1">
+
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv-printshiv.min.js"></script>
+		<![endif]-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<h1>Welcome!<br>
+			Everything is Fine.</h1>
+		</header>
+
+			<div class="janet-container">
+			<div class="janet">
+				<img class="hvr-grow" src="images/4janet.png">
+			</div>
+			<div class="intro">
+				<h2>Hi, I'm Janet.</h2>
+				<p>Welcome to the afterlife. Please take this short quiz to find out where you belong.</p>
+<!-- added ID to button to click for event listener -->
+				<a id="quiz-button" class="quiz-button" href=#quiz>Take the Quiz</a>
+			</div>
+		</div>
+
+
+<!-- Created container for entire quiz block -->
+			<section class="whole-quiz" id="whole-quiz">
+
+				<div class="quiz-style">
+					<div class="quiz-container">
+			  		<div id="quiz"></div>
+					</div>
+
+					<div class="quiz-buttons">
+						<button id="previous">Previous Question</button>
+						<button class="next" id="next">Next Question</button>
+
+						<form>
+							<input class="button" id="submit" type="button" value="Submit" onClick="random_3()">
+						</form>
+
+					</div>
+
+					<div id="results"></div>
+				</div>
+
+			</section>
+
+
+
+
+		<script type="text/javascript">
+		function random_3(){
+		    var myrandom=Math.round(Math.random()*2)
+		    var link1="http://alliraq.co/thegoodplace/good.html"
+		    var link2="http://alliraq.co/thegoodplace/medium.html#neighbors"
+		    var link3="http://alliraq.co/thegoodplace/bad.html"
+		    if (myrandom==0)
+		        window.location=link1
+		    else if (myrandom==1)
+		        window.location=link2
+		    else if (myrandom==2)
+		        window.location=link3
+		}
+		</script>
+
+		<!-- <form>
+		<input type="button" value="random link!" onClick="random_3()">
+		</form> -->
+		<script src="js/quiz.js"></script>
+
+	</body>
+
+
+
+</html>
